@@ -11,16 +11,16 @@
 		<h5 class="title is-5 has-text-centered is-uppercase">LOGIN</h5>
 
 		<div class="field">
-			<label class="label">Usuario</label>
+			<label class="label">User</label>
 			<div class="control">
-			    <input class="input" type="text" name="login_usuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required >
+			    <input class="input" type="text" name="login_usuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required placeholder="Username">
 			</div>
 		</div>
 
 		<div class="field">
-		  	<label class="label">Clave</label>
+		  	<label class="label">Password</label>
 		  	<div class="control">
-		    	<input class="input" type="password" name="login_clave" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required >
+		    	<input class="input" type="password" name="login_clave" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required placeholder="Password">
 		  	</div>
 		</div>
 
@@ -29,4 +29,13 @@
 		</p>
 	</form>
 </div>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>

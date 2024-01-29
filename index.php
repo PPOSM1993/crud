@@ -23,6 +23,9 @@
     <body>
         <?php
             use app\controllers\viewsController;
+            use app\controllers\loginController;
+
+            $insLogin = new loginController();
 
             $viewsController=new viewsController();
             $vista=$viewsController->obtenerVistasControlador($url[0]);
@@ -30,8 +33,13 @@
             if($vista=="login" || $vista=="404") {
                 require_once "./app/views/content/".$vista."-view.php";
             } else {
+                #Para cerrar sesión
+                if((!isset($_SESSION['id']) || $_SESSION['id']=="") || (!isset($_SESSION['usuario']) || $_SESSION['usuario']=="")
+                || (!isset($_SESSION['nombre']) || $_SESSION['nombre']=="")){
+                    $insLogin->cerrarSesionControlador();
+                    exit();
+                }
                 require_once "./app/views/inc/navbar.php";
-                
                 require_once $vista;
             }
             

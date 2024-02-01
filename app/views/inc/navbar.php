@@ -40,15 +40,18 @@
         <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
-                    ** User Name **
+                    Hola <?php  echo $_SESSION['nombre'] . " " . $_SESSION['apellido']; ?> 
                 </a>
                 <div class="navbar-dropdown is-boxed">
 
-                <a class="navbar-item" href="<?php echo APP_URL; ?>userAccount/">
+                    <!--<a class="navbar-item" href="<?php echo APP_URL; ?>userAccount/">
+                        Mi cuenta
+                    </a>-->
+                    <a class="navbar-item" href="<?php echo APP_URL . "userUpdate/".$_SESSION['id']."/";?>">
                         Mi cuenta
                     </a>
-                    <a class="navbar-item" href="<?php echo APP_URL; ?>userPhoto/">
-                        Mi foto
+                    <a class="navbar-item" href="<?php echo APP_URL . "userPhoto/".$_SESSION['id']."/";?>">
+                        Mi Foto
                     </a>
                     <hr class="navbar-divider">
                     <a class="navbar-item" href="<?php echo APP_URL; ?>userLogout/" id="btn_exit">
